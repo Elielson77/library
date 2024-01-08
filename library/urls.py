@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers
+from rest_framework.routers import DefaultRouter
 from books.api.views import BooksViewSet
 
-route = routers.DefaultRouter()
+route = DefaultRouter()
 
 route.register(r"books", BooksViewSet, basename="Books")
 
